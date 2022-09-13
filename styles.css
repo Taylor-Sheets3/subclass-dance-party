@@ -9,7 +9,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .addDancerButton, .starDancerButton, .FatDancer{
   padding:5px 12px;
   float:right;
 }
@@ -24,4 +24,24 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+
+.fat-dancer{
+  border:10px solid green;
+  border-radius:100px;
+  position:absolute;
+  height: 200px;
+  width: 200px;
+  background-color: green;
+}
+
+.starDancer {
+  position: absolute;
+  margin-left: .9em;
+  margin-right: .9em;
+  margin-bottom: 1.2em;
+  border-right: .3em solid transparent;
+  border-bottom: .7em solid rgb(58, 109, 219);
+  border-left: .3 solid transparent;
+  transform: rotate(-35deg);
 }
