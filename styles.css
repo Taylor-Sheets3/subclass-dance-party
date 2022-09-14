@@ -1,7 +1,10 @@
 body, html{
   height:100%;
 }
+
 body{
+  background-image: url('lib/DanceFloor.jpeg');
+  background-size: 100% 100%;
   margin: 0px;
   background-color:#444;
   font-size: 18px;
@@ -35,13 +38,51 @@ body, a:link, a:visited, a:active{
   background-color: green;
 }
 
+.fat-dancer:hover{
+  background-color: yellow;
+  height: 300px;
+  width: 300px;
+  border-radius: 150px;
+  border: 30px solid red;
+}
+
 .starDancer {
-  position: absolute;
+  position: relative;
+
+  display: inline-block;
+  width: 0;
+  height: 0;
+
   margin-left: .9em;
   margin-right: .9em;
   margin-bottom: 1.2em;
-  border-right: .3em solid transparent;
-  border-bottom: .7em solid rgb(58, 109, 219);
-  border-left: .3 solid transparent;
+
+  border-right:  .3em solid transparent;
+  border-bottom: .7em  solid rgb(60, 82, 204);
+  border-left:   .3em solid transparent;
+
+  /* Controlls the size of the stars. */
+  font-size: 24px;
+}
+
+.starDancer:before, .starDancer:after {
+  content: '';
+
+  display: block;
+  width: 0;
+  height: 0;
+
+  position: absolute;
+  top: .6em;
+  left: -1em;
+
+  border-right:  1em solid transparent;
+  border-bottom: .7em  solid rgb(60, 82, 204);
+  border-left:   1em solid transparent;
+
   transform: rotate(-35deg);
+}
+
+.starDancer:after {
+  transform: rotate(35deg);
 }
