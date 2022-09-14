@@ -32,3 +32,45 @@ describe('blinkyDancer', function() {
     });
   });
 });
+
+describe('starDancer', function() {
+
+  var starDancer, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    starDancer = new makeStarDancer(10, 20, timeBetweenSteps);
+  });
+
+  it('should have a jQuery $node object', function() {
+    expect(starDancer.$node).to.be.an.instanceof(jQuery);
+  });
+
+  it('should have a step function that makes its node blink', function() {
+    sinon.spy(starDancer.$node, 'toggle');
+    starDancer.step();
+    expect(starDancer.$node.toggle.called).to.be.true;
+  });
+});
+
+describe('FatDancer', function() {
+
+  var FatDancer, clock;
+  var timeBetweenSteps = 100;
+
+  beforeEach(function() {
+    clock = sinon.useFakeTimers();
+    FatDancer = new makeFatDancer(10, 20, timeBetweenSteps);
+  });
+
+  it('should have a jQuery $node object', function() {
+    expect(FatDancer.$node).to.be.an.instanceof(jQuery);
+  });
+
+  it('should have a step function that makes its node blink', function() {
+    sinon.spy(FatDancer.$node, 'toggle');
+    FatDancer.step();
+    expect(FatDancer.$node.toggle.called).to.be.true;
+  });
+});
