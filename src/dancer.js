@@ -22,11 +22,7 @@ makeDancer.prototype.step = function() {
 };
 
 makeDancer.prototype.setPosition = function(top, left) {
-<<<<<<< HEAD
-  // Use css top and left properties to position our <span> tag
-  // where it belongs on the page. See http://api.jquery.com/css/
-=======
->>>>>>> 963793294b0c0661a86422e97c2409e6e40d24e3
+
   var styleSettings = {
     top: top,
     left: left
@@ -40,12 +36,10 @@ makeDancer.prototype.setPosition = function(top, left) {
     // if node is fat dancer and within 50 px of top and left
     let top1 = window.dancers[i].top;
     let left1 = window.dancers[i].left;
-    underTheRoot = Math.abs((top1 - top)**2 + (left1 - left) ** 2)
+    underTheRoot = Math.abs((top1 - top) ** 2 + (left1 - left) ** 2)
     distance = Math.sqrt(underTheRoot);
     if (distance < 50 && distance > 0){
       this.$node.css(styleSettings)
     }
   }
-
-  //
 };
